@@ -6,5 +6,24 @@ description = "Unofficial Rust library for Toss Invest APIs"
 license = "MIT"
 repository = "https://github.com/kyunghyunHan/tossinvest_rs"
 
-
 [dependencies]
+reqwest = { version = "0.12", features = ["json"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["full"] }
+dotenvy = "0.15"
+
+[[example]]
+name = "market_data"
+path = "examples/market_data.rs"
+
+[[example]]
+name = "stock_info"
+path = "examples/stock_info.rs"
+
+[[example]]
+name = "account_order"
+path = "examples/account_order.rs"
